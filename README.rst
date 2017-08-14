@@ -1,7 +1,7 @@
-Yr-tools
+MET-tools
 ==============================
 
-Yr-tools consists of a set of tools to plot data from MEPS, Senorge, Netatmo, and KDVH
+MET-tools consists of a set of tools to plot data from MEPS, Senorge, Netatmo, and KDVH
 
 
 Features
@@ -16,16 +16,15 @@ Create a timeseries for Oslo showing two MEPS runs, Netatmo, and KDVH values
 
 .. code-block:: bash
 
-  yrtools plot -o figure.png -m meps:2017080100,meps:2017080106,netatmo,kdvh -lat 60 -lon 10 -r 10
+  mettools plot -o figure.png -m meps:2017080100,meps:2017080106,netatmo,kdvh -lat 60 -lon 10 -r 10
 
 Installing on Ubuntu
 --------------------
 
 **Prerequisites**
 
-Yr-tools requires NetCDF as well as the python packages numpy, scipy, and matplotlib. The python
-package mpltoolkits.basemap is optional, but provides a background map when verification scores are
-plotted on a map. Install the packages as follows:
+MET-tools requires NetCDF as well as the python packages numpy, scipy, mpltoolkits.basemap and matplotlib.
+Install the packages as follows:
 
 .. code-block:: bash
 
@@ -37,16 +36,16 @@ plotted on a map. Install the packages as follows:
 **Installing from source**
 
 Download the source code of the latest version:
-https://github.com/WFRT/verif/releases/. Unzip the file and navigate into the extracted folder.
+https://github.com/tnipen/mettools/releases/. Unzip the file and navigate into the extracted folder.
 
-Then install Yr-tools by executing the following inside the extracted folder:
+Then install MET-tools by executing the following inside the extracted folder:
 
 .. code-block:: bash
 
   sudo pip install -r requirements.txt
   sudo python setup.py install
 
-This will create the executable ``/usr/local/bin/yrtools``. Add ``/usr/local/bin`` to your PATH environment
+This will create the executable ``/usr/local/bin/mettools``. Add ``/usr/local/bin`` to your PATH environment
 variable if necessary. If you do not have sudo privileges do:
 
 .. code-block:: bash
@@ -54,11 +53,11 @@ variable if necessary. If you do not have sudo privileges do:
   pip install -r requirements.txt --user
   python setup.py install --user
 
-This will create the executable ``~/.local/bin/yrtools``. Add ``~/.local/bin`` to your PATH environment
+This will create the executable ``~/.local/bin/mettools``. Add ``~/.local/bin`` to your PATH environment
 variable.
 
 Copyright and license
 ---------------------
 
-Copyright (C) 2017 MET Norway. yrtools is licensed under `LGPL version 3
-<https://github.com/tnipen/yrtools/blob/master/LICENSE>`_ or (at your option) any later version.
+Copyright (C) 2017 MET Norway. mettools is licensed under `LGPL version 3
+<https://github.com/tnipen/mettools/blob/master/LICENSE>`_ or (at your option) any later version.
